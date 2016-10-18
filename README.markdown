@@ -17,7 +17,7 @@ First of all, you need to build an index with command:
 
 where `ENCTYPE` is either "simple9" or "varbyte", depending on index encoding algorithm. 
 
-`FILES` is a list of documents in format, described [here](https://github.com/Nafanya/Index-search#format-of-the-documents).
+`FILES` is a list of documents in format, described [here](https://github.com/Nikonz/Index-search#format-of-the-documents).
 
 Example: `./index simple9 sample/{1,2,3}.gz`
 
