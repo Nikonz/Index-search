@@ -1,44 +1,46 @@
 # Index & Search
 
-This repository contains a part of an implementation of a simple search engine. 
-If you have already downloaded all pages you need, you can use it to build index and make search over it.
+This repository contains partial implementation of a simple search engine. 
+If you have already downloaded all pages you need, you can use it to build index and perform search requests.
 
 # Prerequisites
 
-You need Python 2.7 and Bash to use this engine correctly.
+You need Python 2.7 and Bash to use this engine properly.
 
 # How to use
 
-## Index
+## Index building
 
-First of all, you need to build an index. To do it you should run the following command:
+First of all, you need to build an index with command:
 
-`./index.sh encType sample/1.gz sample/2.gz sample/3.gz ...`
+`./index.sh ENCTYPE FILES...`
 
-where `encType` should be "simple9" or "varbyte" (depends on how you want to encode index). 
-And after encType you should print paths to all the documents, each of which should contain the information about some internet pages in format decribed below:
+where `ENCTYPE` is either "simple9" or "varbyte", depending on index encoding algorithm. 
+`FILES` is a list of document in format, described [Format of the documents](here).
+
+Example: `./index simple9 sample/{1,2,3}.gz`
 
 #### Format of the documents
 
-## Making of a dictionary
+## Dictionary building
 
-Then, you need to build a dictionary for quick search. You can do it by running the following command:
+After index is created, you need to build a dictionary for quick search with the following command:
 
 `./make_dict.sh`
 
 ## Search
 
-Finally, after completing two previous steps, you can use the main part. Congrats! :) To start searching, run:
+Finally, you actually perform search requests. Congrats! :) To start searching, run:
 
 `./search.sh`
 
-Each line you print will be a single query. To stop searching just use SIGTERM.
+Each line you print will be a single query. To stop searching just use `SIGTERM`.
 
 #### Input format
 
-In your queries you can any words and also special symbols: `(`, `)`, `&`. `|`, `!`. So you can make quite complicated queries, if you want.
+You can use any words or special symbols, such as `(`, `)`, `&`. `|`, `!` to make complex queries.
 
 #### Output format
 
-For each query engine will print number of matching urls at the first line. And then there will be printed all these urls, divided with a `\n` symbol.
-Each url can be printed only one time for a single query.
+For each query engine will print the number of matching urls at the first line, followed by `LF` separated links that matched the query.
+Each url is printed once per single query.
