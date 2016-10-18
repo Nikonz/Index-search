@@ -16,7 +16,8 @@ First of all, you need to build an index with command:
 `./index.sh ENCTYPE FILES...`
 
 where `ENCTYPE` is either "simple9" or "varbyte", depending on index encoding algorithm. 
-`FILES` is a list of document in format, described [here](https://github.com/Nafanya/Index-search#format-of-the-documents).
+
+`FILES` is a list of documents in format, described [here](https://github.com/Nafanya/Index-search#format-of-the-documents).
 
 Example: `./index simple9 sample/{1,2,3}.gz`
 
@@ -30,7 +31,7 @@ After index is created, you need to build a dictionary for quick search with the
 
 ## Search
 
-Finally, you actually perform search requests. Congrats! :) To start searching, run:
+Finally, you actually perform search requests. Congrats! :bowtie:. To start searching, run:
 
 `./search.sh`
 
