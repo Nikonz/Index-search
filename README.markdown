@@ -25,7 +25,7 @@ Example: `./index simple9 sample/{1,2,3}.gz`
 
 Each document can contain a lot of pages. For each of them there should be url and text after it.
 All data must be serialized using google.protobuf.
-For more information read [this](https://github.com/Nikonz/Index-search/blob/master/src/docreader.py) and [view samples]().
+For more information read [this](https://github.com/Nikonz/Index-search/blob/master/src/docreader.py) and [view samples](https://github.com/Nikonz/Index-search/tree/master/samples).
 
 Also, each document can be packed to ".gz" archieve, if needed.
 
